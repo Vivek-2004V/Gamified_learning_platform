@@ -1,10 +1,14 @@
 # VidyaSphere - Gamified STEM Learning Platform
 
+## 🤖 Built with AI
+**This entire project was completely generated and built using AI!** 
+It leverages the power of **Firebase Studio** alongside the **Antigravity** AI to write the codebase, develop features, and architect the entire platform from scratch.
+
 ## 🌟 Overview
 VidyaSphere is a modern, interactive, and gamified Web3-inspired STEM learning platform designed to make education immersive through 3D simulations and quizzes. Includes built-in offline capabilities (PWA) and multiple subjects tailored for various grade levels.
 
 ## 🚀 Key Features
-- **3D Interactive Simulations**: Uses Three.js for immersive learning (e.g. Hardware Sorters, Math Puzzles, Science Arena).
+- **2D Interactive Simulations**: Uses Three.js for immersive learning (e.g. Hardware Sorters, Math Puzzles, Science Arena).
 - **Offline Mode (PWA)**: Access previously visited content and lessons without an internet connection.
 - **Progress Tracking & Dashboards**: Dedicated portals for classes 6 through 12.
 - **Multilingual Support**: Read content seamlessly in different native languages.
@@ -18,9 +22,9 @@ To explore the platform and bypass registration, please use the following test a
 1. **Access the Dashboard**:
    - Open the web application and click on **Login**. Enter the test credentials provided above.
 2. **Setup Your Profile**:
-   - Once logged in, your profile dashboard will auto-route to your designated grade level (e.g., Class 8, Class 10).
+   - Once logged in, your profile dashboard will auto-route to your designated grade level (e.g., Class 6).
 3. **Explore Subjects**:
-   - Look through the different subjects available to you including Mathematics, Science, Engineering, and Technology.
+   - Look through the different subjects available to you, including Mathematics, Science, Engineering, and Technology.
    - You can access worksheets, e-books, and video lectures.
 4. **Play Games & Simulations**:
    - Navigate to the **Simulations** or **Games** tab.
@@ -38,15 +42,15 @@ To explore the platform and bypass registration, please use the following test a
 ## 💻 Local Setup Instructions
 If you wish to run the platform locally on your own machine, follow these steps:
 
-1. **Clone the repository:** 
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/Vivek-2004V/gamified_learning_paltform.git
    ```
-2. **Install dependencies:** 
+2. **Install dependencies:**
    ```bash
    npm install --legacy-peer-deps
    ```
-3. **Start the development server:** 
+3. **Start the development server:**
    ```bash
    npm run dev
    ```
