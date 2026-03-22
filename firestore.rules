@@ -1,0 +1,90 @@
+/**
+ * Core Philosophy: This ruleset enforces a strict user-ownership model where users
+ * can only access and manage their own data. All user-specific information is
+ * isolated within a document that only the authenticated owner can control.
+ *
+ * Data Structure: The data is organized under top-level collections like `users`
+ * and `userProgress`. Each user's data is stored in a document where the
+ * document ID is the user's unique authentication ID (UID).
+ * Example: `/users/{userId}`, `/userProgress/{userId}`.
+ *
+ * Key Security Decisions:
+ * - Default Deny: All operations are denied by default.
+ * - User Data Privacy: A user can only read, update, or delete their own
+ *   documents. They cannot access another user's document.
+ * - No Collection Listing: To protect user privacy and prevent data scraping,
+ *   querying entire collections like `/users` or `/userProgress` is forbidden.
+ * - Self-Creation: A user can create their own documents, but only if the
+ *   document ID matches their own authentication UID.
+ *
+ * Denormalization for Authorization: This model uses the document ID (`userId`)
+ * as the primary key for authorization, a form of implicit denormalization.
+ * This avoids any extra lookups and keeps the rules simple and performant.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper Functions for clear, reusable logic
+
+    /**
+     * Checks if the current request is from an authenticated user.
+     */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /**
+     * Checks if the authenticated user's UID matches the provided userId.
+     * This is the foundation of the user-ownership model.
+     * @param userId The UID of the user to check against.
+     */
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    /**
+     * Validates that the user document being created has an internal `id` field
+     * that correctly matches the document's ID in the path ({userId}).
+     * This enforces relational integrity from the moment of creation.
+     */
+    function hasValidInitialData(userId) {
+      return request.resource.data.id == userId;
+    }
+
+    /**
+     * Ensures that the internal `id` field of a user document cannot be changed
+     * after it has been created. This locks in the ownership link.
+     */
+    function hasImmutableId() {
+      return request.resource.data.id == resource.data.id;
+    }
+
+    /**
+     * @description
+     *   Manages user profile documents. A user can create, read, update, and
+     *   delete their own document, but cannot access anyone else's.
+     * @path
+     *   /users/{userId}
+     */
+    match /users/{userId} {
+      allow get: if isOwner(userId);
+      allow list: if false;
+      allow create: if isOwner(userId) && hasValidInitialData(userId);
+      allow update: if isOwner(userId) && hasImmutableId();
+      allow delete: if isOwner(userId);
+    }
+
+    /**
+     * @description
+     *   Manages user progress documents. A user can create, read, update, and
+     *   delete their own progress data.
+     * @path
+     *   /userProgress/{userId}
+     */
+    match /userProgress/{userId} {
+      allow read, write: if isOwner(userId);
+      allow list: if false;
+    }
+  }
+}

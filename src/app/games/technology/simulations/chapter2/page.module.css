@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Mono:wght@700&display=swap');
+
+.circuitCard {
+  background: #ffffff;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  border-top: 10px solid #06b6d4;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  transition: background-color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.circuitCard.success-flash {
+  animation: flash-bg 0.5s ease-out;
+}
+
+@keyframes flash-bg {
+  0% {
+    background-color: #d1fae5; /* light green */
+  }
+  100% {
+    background-color: #ffffff;
+  }
+}
+
+.bitSwitch {
+  width: 100%;
+  height: 150px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 16px;
+  border: 4px solid;
+  font-family: 'Space Mono', monospace;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.bitSwitch:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.bitSwitch:active {
+    transform: translateY(-1px);
+}
+
+.state0 {
+  background-color: #f87171; /* red-400 */
+  border-color: #dc2626; /* red-600 */
+  color: #fee2e2; /* red-100 */
+}
+
+.state1 {
+  background-color: #4ade80; /* green-400 */
+  border-color: #16a34a; /* green-600 */
+  color: #dcfce7; /* green-100 */
+}
+
+.weightLabel {
+  font-size: 1.25rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.binaryDisplay {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0.25rem 0;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+.exponentLabel {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  background: rgba(0,0,0,0.2);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.statusBox {
+  flex-grow: 1;
+  padding: 1rem;
+  border-radius: 16px;
+  border: 2px dashed;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 768px) {
+  .circuitCard {
+    margin: 1rem auto;
+    padding: 1.5rem;
+  }
+
+  .bitSwitch {
+    height: 120px;
+  }
+
+  .weightLabel {
+    font-size: 1rem;
+  }
+
+  .binaryDisplay {
+    font-size: 3rem;
+  }
+
+  .statusBox {
+    font-size: 1rem;
+  }
+}

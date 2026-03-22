@@ -1,0 +1,233 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+.container {
+    background: linear-gradient(180deg, #0f172a, #1e293b, #334155);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.gameContainer {
+    width: 100%;
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.rocketArea {
+    position: relative;
+    height: 200px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.rocket {
+    width: 60px;
+    height: 120px;
+    position: relative;
+    animation: bounce 2s infinite ease-in-out;
+    transition: transform 3s ease-in;
+}
+
+.rocketBody {
+    width: 100%;
+    height: 100px;
+    background: #e2e8f0;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    bottom: 0;
+    border-bottom: 5px solid #94a3b8;
+}
+
+.rocketWindow {
+    width: 20px;
+    height: 20px;
+    background: #60a5fa;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid #93c5fd;
+}
+
+.rocketFinLeft, .rocketFinRight {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid #f43f5e;
+    position: absolute;
+    bottom: 0;
+}
+
+.rocketFinLeft {
+    border-top-color: #f43f5e;
+    transform: translateX(-100%) rotate(20deg);
+    left: 20px;
+}
+
+.rocketFinRight {
+    border-top-color: #f43f5e;
+    transform: translateX(100%) rotate(-20deg);
+    right: 20px;
+}
+
+.thruster {
+    width: 20px;
+    height: 0;
+    background: orange;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 10px 10px;
+    transition: height 0.1s, box-shadow 0.1s;
+}
+
+.thrusterOn {
+    height: 30px;
+    box-shadow: 0 0 20px 10px rgba(255, 165, 0, 0.7);
+    animation: flicker 0.1s infinite;
+}
+
+.gameUI {
+    text-align: center;
+}
+
+.fuelGauge {
+    margin-bottom: 1.5rem;
+}
+
+.fuelBar {
+    width: 100%;
+    height: 20px;
+    background: #334155;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 2px solid #475569;
+}
+
+.fuelLevel {
+    height: 100%;
+    background: linear-gradient(90deg, #34d399, #a7f3d0);
+    border-radius: 8px;
+    transition: width 0.5s ease-out;
+}
+
+.problemBox {
+    background: #1e293b;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.problemText {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f1f5f9;
+}
+
+.answerSection {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.answerInput {
+    flex-grow: 1;
+    height: 50px;
+    padding: 0 1rem;
+    border-radius: 8px;
+    border: 2px solid #475569;
+    background: #1e293b;
+    color: white;
+    font-size: 1.25rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.answerInput:focus {
+    border-color: #60a5fa;
+}
+
+.checkBtn {
+    height: 50px;
+    padding: 0 1.5rem;
+    border-radius: 8px;
+    background: #60a5fa;
+    color: white;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkBtn:hover {
+    background: #3b82f6;
+}
+
+.checkBtn:disabled {
+    background: #475569;
+    cursor: not-allowed;
+}
+
+.statusMessage {
+    margin-top: 1.5rem;
+    font-size: 1.125rem;
+    min-height: 30px;
+    font-weight: 600;
+}
+
+.newGameBtn {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #ef4444;
+    color: white;
+    font-weight: 700;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.newGameBtn:hover {
+    background-color: #dc2626;
+    transform: translateY(-2px);
+}
+
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; transform: scaleY(1); }
+    50% { opacity: 0.8; transform: scaleY(0.9); }
+}
+
+.launch {
+    animation: none !important;
+    transform: translateY(-150vh) !important;
+}
+
+
+  

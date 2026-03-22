@@ -1,0 +1,16 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Abstract background for hero section",
+      "imageUrl": "https://images.unsplash.com/photo-1549490349-8643362247b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdCUyMHB1cnBsZXxlbnwwfHx8fDE3NjM3MTc3Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract purple"
+    },
+    {
+      "id": "tech-quiz-header",
+      "description": "Dynamic image representing technology and code",
+      "imageUrl": "https://images.unsplash.com/photo-1635775017492-1eb935a082a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZWNobm9sb2d5JTIwY29kZXxlbnwwfHx8fDE3NjM3MjczNTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "technology code"
+    }
+  ]
+}

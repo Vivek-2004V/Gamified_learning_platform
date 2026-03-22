@@ -1,0 +1,137 @@
+{
+  "entities": {
+    "User": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "User",
+      "type": "object",
+      "description": "Represents a user account within the VidyaSphere Clone application.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the user entity."
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the user.",
+          "format": "email"
+        },
+        "name": {
+          "type": "string",
+          "description": "The full name of the user."
+        },
+        "class": {
+          "type": "string",
+          "description": "The class or grade of the user/student."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp indicating when the user account was created.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "email",
+        "name",
+        "class",
+        "createdAt"
+      ]
+    },
+    "Progress": {
+      "title": "Progress",
+      "description": "Tracks a student's progress in various learning modules.",
+      "type": "object",
+      "properties": {
+        "quizHistory": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "quizName": { "type": "string" },
+              "score": { "type": "number" },
+              "date": { "type": "string", "format": "date-time" },
+              "streak": { "type": "number" }
+            },
+            "required": ["quizName", "score", "date"]
+          }
+        },
+        "simulationAttempts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "simulationName": { "type": "string" },
+              "attempts": { "type": "number" },
+              "bestScore": { "type": "number" },
+              "lastPlayed": { "type": "string", "format": "date-time" }
+            },
+            "required": ["simulationName", "attempts"]
+          }
+        },
+        "labPerformance": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "labName": { "type": "string" },
+              "status": { "type": "string", "enum": ["completed", "in-progress", "not-started"] },
+              "grade": { "type": "string" },
+              "submittedOn": { "type": "string", "format": "date-time" }
+            },
+            "required": ["labName", "status"]
+          }
+        }
+      }
+    },
+    "Achievement": {
+      "title": "Achievement",
+      "description": "Represents a badge or reward earned by a student.",
+      "type": "object",
+      "properties": {
+        "titleKey": { "type": "string" },
+        "descriptionKey": { "type": "string" },
+        "icon": { "type": "string" },
+        "unlocked": { "type": "boolean" }
+      }
+    },
+    "UserProgress": {
+      "title": "User Progress",
+      "description": "A composite object linking a user to their progress and achievements.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "progress": {
+          "$ref": "#/backend/entities/Progress"
+        },
+        "achievements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/backend/entities/Achievement"
+          }
+        }
+      }
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": {
+        "$ref": "#/backend/entities/User"
+      },
+      "description": "Stores user profile information. Uses path-based ownership for security."
+    },
+    "/userProgress/{userId}": {
+      "schema": {
+        "$ref": "#/backend/entities/UserProgress"
+      },
+      "description": "Stores progress and achievements for each user."
+    }
+  }
+}
