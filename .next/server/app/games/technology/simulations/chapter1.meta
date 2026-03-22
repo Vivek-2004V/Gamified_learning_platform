@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/games/layout,_N_T_/games/technology/layout,_N_T_/games/technology/simulations/layout,_N_T_/games/technology/simulations/chapter1/layout,_N_T_/games/technology/simulations/chapter1/page,_N_T_/games/technology/simulations/chapter1"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/games/technology/simulations/chapter1/__PAGE__",
+    "/games/technology/simulations/chapter1",
+    "/games/technology/simulations",
+    "/games/technology",
+    "/games",
+    "/_index"
+  ]
+}

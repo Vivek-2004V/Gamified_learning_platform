@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/games/layout,_N_T_/games/mathematics/layout,_N_T_/games/mathematics/simulations/layout,_N_T_/games/mathematics/simulations/page,_N_T_/games/mathematics/simulations"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/games/mathematics/simulations/__PAGE__",
+    "/games/mathematics/simulations",
+    "/games/mathematics",
+    "/games",
+    "/_index"
+  ]
+}

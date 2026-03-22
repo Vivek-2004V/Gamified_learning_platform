@@ -1,0 +1,332 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/class-10",
+      "regex": "^/class\\-10(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/class\\-10(?:/)?$"
+    },
+    {
+      "page": "/class-10/dashboard",
+      "regex": "^/class\\-10/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/class\\-10/dashboard(?:/)?$"
+    },
+    {
+      "page": "/class-11",
+      "regex": "^/class\\-11(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/class\\-11(?:/)?$"
+    },
+    {
+      "page": "/class-11/dashboard",
+      "regex": "^/class\\-11/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/class\\-11/dashboard(?:/)?$"
+    },
+    {
+      "page": "/class-12",
+      "regex": "^/class\\-12(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/class\\-12(?:/)?$"
+    },
+    {
+      "page": "/class-12/dashboard",
+      "regex": "^/class\\-12/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/class\\-12/dashboard(?:/)?$"
+    },
+    {
+      "page": "/class-6",
+      "regex": "^/class\\-6(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/class\\-6(?:/)?$"
+    },
+    {
+      "page": "/class-6/dashboard",
+      "regex": "^/class\\-6/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/class\\-6/dashboard(?:/)?$"
+    },
+    {
+      "page": "/class-7",
+      "regex": "^/class\\-7(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/class\\-7(?:/)?$"
+    },
+    {
+      "page": "/class-7/dashboard",
+      "regex": "^/class\\-7/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/class\\-7/dashboard(?:/)?$"
+    },
+    {
+      "page": "/class-8",
+      "regex": "^/class\\-8(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/class\\-8(?:/)?$"
+    },
+    {
+      "page": "/class-8/dashboard",
+      "regex": "^/class\\-8/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/class\\-8/dashboard(?:/)?$"
+    },
+    {
+      "page": "/class-9",
+      "regex": "^/class\\-9(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/class\\-9(?:/)?$"
+    },
+    {
+      "page": "/class-9/dashboard",
+      "regex": "^/class\\-9/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/class\\-9/dashboard(?:/)?$"
+    },
+    {
+      "page": "/dashboard",
+      "regex": "^/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard(?:/)?$"
+    },
+    {
+      "page": "/dashboard/achievements",
+      "regex": "^/dashboard/achievements(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/achievements(?:/)?$"
+    },
+    {
+      "page": "/dashboard/ebooks",
+      "regex": "^/dashboard/ebooks(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/ebooks(?:/)?$"
+    },
+    {
+      "page": "/dashboard/progress",
+      "regex": "^/dashboard/progress(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/progress(?:/)?$"
+    },
+    {
+      "page": "/dashboard/videos",
+      "regex": "^/dashboard/videos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/videos(?:/)?$"
+    },
+    {
+      "page": "/dashboard/worksheets",
+      "regex": "^/dashboard/worksheets(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/worksheets(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/games",
+      "regex": "^/games(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games(?:/)?$"
+    },
+    {
+      "page": "/games/engineering",
+      "regex": "^/games/engineering(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/engineering(?:/)?$"
+    },
+    {
+      "page": "/games/engineering/quiz",
+      "regex": "^/games/engineering/quiz(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/engineering/quiz(?:/)?$"
+    },
+    {
+      "page": "/games/engineering/simulations",
+      "regex": "^/games/engineering/simulations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/engineering/simulations(?:/)?$"
+    },
+    {
+      "page": "/games/engineering/simulations/chapter1",
+      "regex": "^/games/engineering/simulations/chapter1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/engineering/simulations/chapter1(?:/)?$"
+    },
+    {
+      "page": "/games/engineering/simulations/chapter2",
+      "regex": "^/games/engineering/simulations/chapter2(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/engineering/simulations/chapter2(?:/)?$"
+    },
+    {
+      "page": "/games/mathematics",
+      "regex": "^/games/mathematics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/mathematics(?:/)?$"
+    },
+    {
+      "page": "/games/mathematics/quiz",
+      "regex": "^/games/mathematics/quiz(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/mathematics/quiz(?:/)?$"
+    },
+    {
+      "page": "/games/mathematics/simulations",
+      "regex": "^/games/mathematics/simulations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/mathematics/simulations(?:/)?$"
+    },
+    {
+      "page": "/games/mathematics/simulations/chapter1",
+      "regex": "^/games/mathematics/simulations/chapter1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/mathematics/simulations/chapter1(?:/)?$"
+    },
+    {
+      "page": "/games/mathematics/simulations/chapter2",
+      "regex": "^/games/mathematics/simulations/chapter2(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/mathematics/simulations/chapter2(?:/)?$"
+    },
+    {
+      "page": "/games/mathematics/simulations/chapter3",
+      "regex": "^/games/mathematics/simulations/chapter3(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/mathematics/simulations/chapter3(?:/)?$"
+    },
+    {
+      "page": "/games/mathematics/simulations/chapter4",
+      "regex": "^/games/mathematics/simulations/chapter4(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/mathematics/simulations/chapter4(?:/)?$"
+    },
+    {
+      "page": "/games/science",
+      "regex": "^/games/science(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/science(?:/)?$"
+    },
+    {
+      "page": "/games/science/quiz",
+      "regex": "^/games/science/quiz(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/science/quiz(?:/)?$"
+    },
+    {
+      "page": "/games/science/simulations",
+      "regex": "^/games/science/simulations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/science/simulations(?:/)?$"
+    },
+    {
+      "page": "/games/technology",
+      "regex": "^/games/technology(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/technology(?:/)?$"
+    },
+    {
+      "page": "/games/technology/quiz",
+      "regex": "^/games/technology/quiz(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/technology/quiz(?:/)?$"
+    },
+    {
+      "page": "/games/technology/simulations",
+      "regex": "^/games/technology/simulations(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/technology/simulations(?:/)?$"
+    },
+    {
+      "page": "/games/technology/simulations/chapter1",
+      "regex": "^/games/technology/simulations/chapter1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/technology/simulations/chapter1(?:/)?$"
+    },
+    {
+      "page": "/games/technology/simulations/chapter2",
+      "regex": "^/games/technology/simulations/chapter2(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/games/technology/simulations/chapter2(?:/)?$"
+    },
+    {
+      "page": "/login",
+      "regex": "^/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/offline",
+      "regex": "^/offline(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/offline(?:/)?$"
+    },
+    {
+      "page": "/signup",
+      "regex": "^/signup(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/signup(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

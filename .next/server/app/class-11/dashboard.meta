@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/class-11/layout,_N_T_/class-11/dashboard/layout,_N_T_/class-11/dashboard/page,_N_T_/class-11/dashboard"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/class-11/dashboard/__PAGE__",
+    "/class-11/dashboard",
+    "/class-11",
+    "/_index"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/games/layout,_N_T_/games/engineering/layout,_N_T_/games/engineering/simulations/layout,_N_T_/games/engineering/simulations/page,_N_T_/games/engineering/simulations"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/games/engineering/simulations/__PAGE__",
+    "/games/engineering/simulations",
+    "/games/engineering",
+    "/games",
+    "/_index"
+  ]
+}

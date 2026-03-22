@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/games/layout,_N_T_/games/engineering/layout,_N_T_/games/engineering/quiz/layout,_N_T_/games/engineering/quiz/page,_N_T_/games/engineering/quiz"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/games/engineering/quiz/__PAGE__",
+    "/games/engineering/quiz",
+    "/games/engineering",
+    "/games",
+    "/_index"
+  ]
+}

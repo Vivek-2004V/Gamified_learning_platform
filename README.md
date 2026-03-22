@@ -56,3 +56,59 @@ If you wish to run the platform locally on your own machine, follow these steps:
    ```
 4. **View the Application:**
    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 🔧 Troubleshooting & Problem Solving
+
+If you encounter any issues while using or setting up the platform, here are some common problems and their solutions:
+
+### 1. Installation Errors
+**Problem:** `npm install` fails with dependency conflict errors.
+**Solution:** The project uses specific versions of dependencies. Always run the installation with the `--legacy-peer-deps` flag:
+```bash
+npm install --legacy-peer-deps
+```
+
+### 2. Build or Development Server Issues
+**Problem:** `npm run dev` fails, or you see a PostCSS error.
+**Solution:** Sometimes clearing the Next.js cache can resolve build issues:
+```bash
+rm -rf .next
+npm run dev
+```
+
+### 3. Login/Authentication Problems
+**Problem:** Cannot log in with the test credentials, or it says "Invalid Credentials".
+**Solution:** 
+- Double-check the email (`siddhi123@gmail.com`) and password (`Siddhi2004@`). 
+- Ensure there are no spaces at the beginning or end of the password.
+- Check your internet connection. Authentication requires Firebase to connect to its servers.
+
+### 4. 3D Simulations Not Loading
+**Problem:** The screen stays blank or lags when opening a 3D simulation.
+**Solution:**
+- **Hardware Acceleration:** Ensure hardware acceleration is enabled in your browser settings (Chrome: `Settings > System > Use graphics acceleration when available`).
+- **Device Performance:** Close background tabs or applications. Three.js requires decent GPU power to render smoothly.
+
+### 5. Offline Mode (PWA) Not Working
+**Problem:** The app does not load without the internet.
+**Solution:** 
+- You must install the PWA first while online. Look for the install icon in the URL bar.
+- Once installed, open the app from your desktop/home screen. Note that only previously visited lessons and cached assets will be available offline.
+- Try clearing your browser cache and Service Workers to reinstall the PWA.
+
+### 6. UI or Styling Looks Broken
+**Problem:** Buttons are misaligned or colors are incorrect.
+**Solution:** Perform a hard refresh of the page:
+- **Windows/Linux:** `Ctrl + F5` or `Ctrl + Shift + R`
+- **Mac:** `Cmd + Shift + R`
+
+### 7. Server / Client Component Issue
+**Problem:** ❌ You see an error like `You're importing a component that needs "use client"`.
+**Solution:** This happens when a React hook or browser API is used inside a Next.js Server Component without marking it as a Client Component.
+**✅ Fix:** Add the following directive to the very top of the problematic file:
+```tsx
+"use client";
+```
+
+**Still having issues?** 
+If your problem is not listed above, check the browser console (`F12` or `Right Click -> Inspect -> Console`) for any red error messages. You can use these messages to diagnose the root cause or open an issue on the GitHub repository.

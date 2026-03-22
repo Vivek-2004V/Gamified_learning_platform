@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,39126,e=>{"use strict";var c=e.i(43476);function l({children:e}){return(0,c.jsx)("div",{className:"flex h-screen bg-background",children:(0,c.jsx)("div",{className:"flex-1 overflow-y-auto p-4 md:p-6 lg:p-8",children:e})})}e.s(["default",()=>l])}]);

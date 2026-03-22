@@ -2,21 +2,3 @@
 > nextn@0.1.0 typecheck
 > tsc --noEmit
 
-next.config.ts(8,3): error TS2353: Object literal may only specify known properties, and 'eslint' does not exist in type 'NextConfig'.
-src/app/class-10/page.tsx(35,17): error TS2304: Cannot find name 'isLoading'.
-src/app/class-12/page.tsx(35,17): error TS2304: Cannot find name 'isLoading'.
-src/app/class-8/page.tsx(35,17): error TS2304: Cannot find name 'isLoading'.
-src/app/class-9/page.tsx(35,17): error TS2304: Cannot find name 'isLoading'.
-src/app/games/mathematics/simulations/page.tsx(57,23): error TS2339: Property 'comingSoon' does not exist on type '{ title: string; description: string; icon: Element; href: string; }'.
-src/app/games/mathematics/simulations/page.tsx(69,22): error TS2339: Property 'comingSoon' does not exist on type '{ title: string; description: string; icon: Element; href: string; }'.
-src/app/games/mathematics/simulations/page.tsx(77,21): error TS2339: Property 'comingSoon' does not exist on type '{ title: string; description: string; icon: Element; href: string; }'.
-src/app/games/page.tsx(37,23): error TS2304: Cannot find name 'isLoading'.
-src/app/games/science/simulations/page.tsx(38,16): error TS2503: Cannot find namespace 'THREE'.
-src/app/games/science/simulations/page.tsx(38,37): error TS2503: Cannot find namespace 'THREE'.
-src/app/games/science/simulations/page.tsx(38,72): error TS2503: Cannot find namespace 'THREE'.
-src/app/games/science/simulations/page.tsx(38,100): error TS2503: Cannot find namespace 'THREE'.
-src/app/games/technology/simulations/chapter1/page.tsx(412,7): error TS2322: Type '(() => void) | undefined' is not assignable to type '(() => void) | null'.
-  Type 'undefined' is not assignable to type '(() => void) | null'.
-src/app/games/technology/simulations/page.tsx(45,23): error TS2339: Property 'comingSoon' does not exist on type '{ title: string; description: string; icon: Element; href: string; }'.
-src/app/games/technology/simulations/page.tsx(57,22): error TS2339: Property 'comingSoon' does not exist on type '{ title: string; description: string; icon: Element; href: string; }'.
-src/app/games/technology/simulations/page.tsx(65,21): error TS2339: Property 'comingSoon' does not exist on type '{ title: string; description: string; icon: Element; href: string; }'.

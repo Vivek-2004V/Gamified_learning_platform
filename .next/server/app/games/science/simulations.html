@@ -1,0 +1,198 @@
+<!DOCTYPE html><!--SNee2HzKRAFrbTV3AAKw1--><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/chunks/317e37f6630c0ebb.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/526c643bf2527860.js"/><script src="/_next/static/chunks/a83c74b31c9a9303.js" async=""></script><script src="/_next/static/chunks/8dbe0403323ba46a.js" async=""></script><script src="/_next/static/chunks/c0f8769e63b813bb.js" async=""></script><script src="/_next/static/chunks/2e312bcccf1f4790.js" async=""></script><script src="/_next/static/chunks/turbopack-4d3731e39dea6025.js" async=""></script><script src="/_next/static/chunks/47668a5d11abf730.js" async=""></script><script src="/_next/static/chunks/bdcf6abaa610ba57.js" async=""></script><script src="/_next/static/chunks/96ab8fbd00cdeb8f.js" async=""></script><script src="/_next/static/chunks/dba843f5f0a66a07.js" async=""></script><script src="/_next/static/chunks/814c3037edec1fbc.js" async=""></script><script src="/_next/static/chunks/ff1a16fafef87110.js" async=""></script><script src="/_next/static/chunks/946ac7d980f5ba21.js" async=""></script><script src="/_next/static/chunks/8d2308e23aa69f29.js" async=""></script><link rel="preload" href="/_next/static/chunks/317e37f6630c0ebb.css" as="stylesheet"/><link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" as="stylesheet"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><title>Anime Science Warriors</title><meta name="description" content="3D Battle Simulation • Class 6 Learning Adventure"/><link rel="manifest" href="/manifest.json"/><link rel="icon" href="/favicon.ico?favicon.7ed73651.ico" sizes="48x48" type="image/x-icon"/><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><script src="/_next/static/chunks/a6dad97d9634a72d.js" noModule=""></script></head><body class="font-body antialiased"><div hidden=""><!--$--><!--/$--></div><div class="relative flex min-h-screen flex-col bg-background"><header class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"><div class="container mx-auto flex h-14 max-w-7xl items-center justify-between px-4"><div class="flex items-center space-x-4"><a class="flex items-center space-x-3 group" href="/"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-primary"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span class="text-xl font-bold text-foreground transition-all duration-300 group-hover:animate-glitch">VidyaSphere</span></a></div><div class="flex items-center space-x-2"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover:bg-accent hover:text-accent-foreground h-10 w-10 group" aria-label="Select Language" type="button" id="radix-_R_55lb_" aria-haspopup="menu" aria-expanded="false" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe h-5 w-5 text-foreground"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></button><div class="animate-pulse bg-muted h-8 w-8 rounded-full"></div></div></div></header><main class="flex-1 flex flex-col"><div class="w-screen h-screen overflow-hidden">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Rajdhani', sans-serif; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+      html, body { width: 100%; height: 100%; overflow: hidden; position: fixed; }
+      body { background: radial-gradient(circle at center, #000428, #004e92); color: white; -webkit-user-select: none; user-select: none; }
+      #game-container { position: fixed; width: 100%; height: 100%; perspective: 1000px; top: 0; left: 0; overflow: hidden; }
+      .floating-particles { position: absolute; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+      .particle { position: absolute; width: 3px; height: 3px; background: rgba(255, 255, 255, 0.3); border-radius: 50%; animation: floatParticle 20s infinite linear; }
+      #loading-screen { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, #000428 0%, #004e92 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 1000; backdrop-filter: blur(10px); }
+      .loading-logo { font-size: 4rem; margin-bottom: 20px; animation: pulseGlow 2s infinite alternate; text-shadow: 0 0 30px #00ffff; }
+      .loading-title { font-family: 'Orbitron', sans-serif; font-size: clamp(1.5rem, 5vw, 2.5rem); background: linear-gradient(45deg, #00ffff, #00ffaa, #ffff00); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 10px; letter-spacing: 2px; text-shadow: 0 0 20px rgba(0, 255, 255, 0.5); text-align: center; padding: 0 20px; }
+      .loading-subtitle { color: #aaffff; font-size: clamp(0.9rem, 3vw, 1.2rem); margin-bottom: 40px; opacity: 0.8; text-align: center; padding: 0 20px; }
+      .loading-progress-container { width: min(400px, 80%); height: 12px; background: rgba(255, 255, 255, 0.1); border-radius: 10px; overflow: hidden; border: 1px solid rgba(0, 255, 255, 0.3); box-shadow: 0 0 20px rgba(0, 255, 255, 0.2); }
+      .loading-progress-bar { height: 100%; background: linear-gradient(90deg, #00ffff, #00ffaa, #ffff00); width: 0%; transition: width 0.3s ease; position: relative; overflow: hidden; }
+      .loading-progress-bar::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent); animation: shimmer 2s infinite; }
+      .loading-percentage { margin-top: 15px; font-family: 'Orbitron', sans-serif; font-size: clamp(1.2rem, 4vw, 1.5rem); color: #00ffff; text-shadow: 0 0 10px #00ffff; }
+      .neon-border { border: 2px solid; border-image: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00) 1; animation: borderGlow 3s infinite alternate; }
+      .neon-text { text-shadow: 0 0 10px currentColor, 0 0 20px currentColor; }
+      #main-menu { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 30% 30%, rgba(0, 4, 40, 0.95), rgba(0, 78, 146, 0.95)); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 50; backdrop-filter: blur(5px); transform-style: preserve-3d; padding: 20px; overflow-y: auto; }
+      .title-section { text-align: center; margin-bottom: clamp(20px, 5vh, 40px); animation: titleFloat 6s ease-in-out infinite; transform-style: preserve-3d; }
+      .main-title { font-family: 'Orbitron', sans-serif; font-size: clamp(2rem, 8vw, 4.5rem); font-weight: 900; background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: 0 0 30px rgba(255, 0, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3); letter-spacing: 1px; margin-bottom: 10px; position: relative; line-height: 1.2; }
+      .main-title::after { content: '⚡'; position: absolute; right: -35px; top: 0; font-size: clamp(1.5rem, 6vw, 3rem); animation: electricSpark 1.5s infinite; }
+      .subtitle { font-size: clamp(0.9rem, 3vw, 1.5rem); color: #aaffff; opacity: 0.9; text-shadow: 0 0 10px rgba(170, 255, 255, 0.5); letter-spacing: 1px; line-height: 1.4; }
+      .hero-selection-container { position: relative; width: 100%; max-width: 1200px; margin: clamp(15px, 3vh, 30px) 0; perspective: 1000px; }
+      .hero-carousel { display: flex; gap: 15px; overflow-x: auto; padding: 15px; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; scroll-padding: 15px; }
+      .hero-carousel::-webkit-scrollbar { display: none; }
+      .hero-card { flex: 0 0 auto; width: clamp(130px, 28vw, 200px); height: clamp(200px, 40vw, 280px); background: linear-gradient(135deg, rgba(0, 20, 60, 0.8), rgba(0, 40, 100, 0.6)); border-radius: 15px; padding: clamp(15px, 3vw, 25px); cursor: pointer; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border: 2px solid transparent; position: relative; overflow: hidden; transform-style: preserve-3d; }
+      .hero-card::before { content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffaa); border-radius: 17px; z-index: -1; opacity: 0; transition: opacity 0.3s; }
+      .hero-card:active::before { opacity: 1; animation: rotateBorder 3s linear infinite; }
+      .hero-card.selected { border-color: #ffff00; box-shadow: 0 0 30px rgba(255, 255, 0, 0.5), inset 0 0 15px rgba(255, 255, 0, 0.2); animation: selectedGlow 2s infinite alternate; }
+      .hero-icon { font-size: clamp(2.5rem, 8vw, 4rem); margin-bottom: clamp(10px, 2vw, 20px); text-align: center; filter: drop-shadow(0 0 10px currentColor); animation: iconFloat 3s ease-in-out infinite; }
+      .hero-name { font-family: 'Orbitron', sans-serif; font-size: clamp(0.9rem, 3vw, 1.2rem); text-align: center; font-weight: 700; color: #ffffff; text-shadow: 0 0 10px currentColor; margin-bottom: 8px; line-height: 1.3; }
+      .hero-stats { display: flex; justify-content: space-around; margin-top: clamp(8px, 2vw, 15px); font-size: clamp(0.7rem, 2.5vw, 0.9rem); color: #aaffff; }
+      .stat { text-align: center; }
+      .stat-value { color: #ffff00; font-weight: bold; }
+      .menu-buttons { display: flex; flex-direction: column; gap: 15px; margin-top: clamp(20px, 5vh, 40px); width: min(400px, 90%); }
+      .menu-btn { padding: clamp(12px, 3vh, 18px) clamp(20px, 5vw, 50px); font-size: clamp(1rem, 3.5vw, 1.3rem); font-family: 'Orbitron', sans-serif; font-weight: 700; background: linear-gradient(45deg, #ff0066, #ff4400); border: none; border-radius: 50px; color: white; cursor: pointer; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; overflow: hidden; letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); -webkit-tap-highlight-color: transparent; min-height: 50px; }
+      .menu-btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); transition: left 0.5s; }
+      .menu-btn:active::before { left: 100%; }
+      .menu-btn:active { transform: scale(0.95); }
+      #start-game { background: linear-gradient(45deg, #00cc00, #00ff88); }
+      .mobile-controls { position: absolute; bottom: 20px; left: 0; width: 100%; padding: 15px; z-index: 30; display: none; pointer-events: none; }
+      .dpad { position: relative; width: 150px; height: 150px; }
+      .dpad-btn { position: absolute; width: 60px; height: 60px; background: rgba(0, 0, 0, 0.6); border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 15px; color: white; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); pointer-events: auto; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+      .dpad-btn:active { background: rgba(255, 255, 255, 0.2); transform: scale(0.9); }
+      .dpad-up { top: 0; left: 45px; } .dpad-down { bottom: 0; left: 45px; } .dpad-left { top: 45px; left: 0; } .dpad-right { top: 45px; right: 0; }
+      .action-buttons { position: absolute; right: 20px; bottom: 20px; display: flex; flex-direction: column; gap: 15px; pointer-events: auto; }
+      .action-btn { width: 70px; height: 70px; border-radius: 50%; background: linear-gradient(45deg, #ff0066, #ff4400); border: 3px solid rgba(255, 255, 255, 0.3); color: white; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+      .action-btn:active { transform: scale(0.9); opacity: 0.8; }
+      #attack-btn { background: linear-gradient(45deg, #0066ff, #00aaff); }
+      #special-btn { background: linear-gradient(45deg, #00cc00, #00ff88); }
+      #ultimate-btn { background: linear-gradient(45deg, #ff00ff, #ffff00); }
+      #game-hud { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 20; display: none; }
+      .hud-player-info { position: absolute; top: clamp(10px, 3vh, 30px); left: clamp(10px, 2vw, 30px); width: clamp(250px, 70vw, 300px); background: rgba(0, 0, 0, 0.7); border-radius: 10px; padding: clamp(10px, 2vw, 20px); backdrop-filter: blur(10px); border: 2px solid #00ffff; box-shadow: 0 0 20px rgba(0, 255, 255, 0.3); }
+      .player-name { font-family: 'Orbitron', sans-serif; font-size: clamp(1rem, 4vw, 1.5rem); color: #00ffff; margin-bottom: 10px; text-shadow: 0 0 10px #00ffff; line-height: 1.2; }
+      .health-container, .energy-container { margin-bottom: 10px; }
+      .health-label, .energy-label { display: flex; justify-content: space-between; margin-bottom: 5px; color: #ffffff; font-size: clamp(0.7rem, 2.5vw, 0.9rem); }
+      .health-bar, .energy-bar { height: clamp(12px, 3vw, 20px); background: rgba(255, 255, 255, 0.1); border-radius: 10px; overflow: hidden; position: relative; }
+      .health-fill { height: 100%; background: linear-gradient(90deg, #ff0000, #ff9900, #00ff00); width: 100%; transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+      .energy-fill { height: 100%; background: linear-gradient(90deg, #0066ff, #00ffff); width: 100%; transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+      .hud-score { position: absolute; top: clamp(10px, 3vh, 30px); right: clamp(10px, 2vw, 30px); background: rgba(0, 0, 0, 0.7); padding: clamp(10px, 2vw, 20px) clamp(15px, 3vw, 30px); border-radius: 10px; border: 2px solid #ffff00; backdrop-filter: blur(10px); box-shadow: 0 0 20px rgba(255, 255, 0, 0.3); }
+      .score-value { font-family: 'Orbitron', sans-serif; font-size: clamp(1.5rem, 5vw, 2.5rem); color: #ffff00; text-shadow: 0 0 15px #ffff00; }
+      .score-label { color: #ffffff; font-size: clamp(0.8rem, 2.5vw, 1rem); opacity: 0.8; }
+      .combat-log { position: absolute; bottom: clamp(120px, 20vh, 200px); left: clamp(10px, 2vw, 30px); width: clamp(250px, 80vw, 300px); max-height: clamp(100px, 20vh, 200px); overflow-y: auto; background: rgba(0, 0, 0, 0.7); border-radius: 10px; padding: 10px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); scrollbar-width: thin; scrollbar-color: #00ffff rgba(0, 0, 0, 0.5); font-size: clamp(0.7rem, 2.5vw, 0.9rem); }
+      .combat-log::-webkit-scrollbar { width: 4px; }
+      .combat-log::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.5); border-radius: 2px; }
+      .combat-log::-webkit-scrollbar-thumb { background: #00ffff; border-radius: 2px; }
+      .log-entry { color: #aaffff; margin-bottom: 6px; font-size: clamp(0.7rem, 2.5vw, 0.9rem); animation: logEntry 0.3s ease-out; word-break: break-word; }
+      .fire-effect { position: absolute; width: 50px; height: 50px; background: radial-gradient(circle, rgba(255,100,0,0.8) 0%, rgba(255,50,0,0) 70%); filter: blur(5px); border-radius: 50%; pointer-events: none; z-index: 5; animation: fireAnimation 0.5s ease-out forwards; }
+      .damage-number { position: absolute; font-family: 'Orbitron', sans-serif; font-size: clamp(1rem, 3vw, 1.5rem); font-weight: bold; color: #ff4444; text-shadow: 0 0 10px #ff0000; pointer-events: none; z-index: 10; animation: damageFloat 1s ease-out forwards; }
+      .science-popup { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0); background: linear-gradient(135deg, rgba(0, 20, 60, 0.95), rgba(0, 40, 100, 0.9)); padding: clamp(20px, 5vw, 40px); border-radius: 20px; text-align: center; max-width: min(600px, 90%); z-index: 100; backdrop-filter: blur(20px); box-shadow: 0 0 50px rgba(0, 255, 255, 0.4), 0 0 0 2px #00ffff, 0 0 0 5px rgba(0, 255, 255, 0.2); display: none; }
+      .science-title { font-family: 'Orbitron', sans-serif; font-size: clamp(1.5rem, 4vw, 2.5rem); background: linear-gradient(45deg, #00ffff, #00ffaa); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 15px; text-shadow: 0 0 20px rgba(0, 255, 255, 0.5); line-height: 1.3; }
+      .science-content { color: #ffffff; font-size: clamp(1rem, 3vw, 1.4rem); line-height: 1.5; margin-bottom: 20px; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
+      .science-icon { font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 15px; animation: scienceGlow 2s infinite alternate; }
+      .controls-help { position: absolute; bottom: clamp(10px, 5vh, 30px); right: clamp(10px, 2vw, 30px); background: rgba(0, 0, 0, 0.8); padding: 15px; border-radius: 10px; border: 2px solid #ff00ff; backdrop-filter: blur(10px); box-shadow: 0 0 20px rgba(255, 0, 255, 0.3); display: none; max-width: min(300px, 80%); }
+      .control-item { display: flex; align-items: center; margin-bottom: 8px; color: #ffffff; font-size: clamp(0.7rem, 2.5vw, 0.9rem); }
+      .control-key { background: #333; padding: 4px 8px; border-radius: 5px; margin-right: 8px; font-family: monospace; min-width: 60px; text-align: center; border: 1px solid #666; font-size: clamp(0.6rem, 2vw, 0.8rem); }
+      #game-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; display: none; }
+      #game-over { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, rgba(0,0,0,0.9) 0%, rgba(100,0,0,0.8) 100%); display: none; flex-direction: column; justify-content: center; align-items: center; z-index: 90; backdrop-filter: blur(10px); padding: 20px; }
+      .game-over-title { font-family: 'Orbitron', sans-serif; font-size: clamp(2rem, 6vw, 4rem); background: linear-gradient(45deg, #ff0000, #ff8800); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 20px; text-shadow: 0 0 30px rgba(255, 0, 0, 0.5); animation: gameOverPulse 2s infinite; text-align: center; line-height: 1.2; }
+      .final-score { font-size: clamp(1.5rem, 5vw, 3rem); color: #ffff00; margin-bottom: 30px; text-shadow: 0 0 20px #ffff00; text-align: center; }
+      #orientation-warning { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000428; z-index: 2000; justify-content: center; align-items: center; flex-direction: column; padding: 20px; text-align: center; }
+      .orientation-icon { font-size: 4rem; margin-bottom: 20px; animation: pulseGlow 2s infinite; }
+      .orientation-text { font-size: 1.5rem; color: #00ffff; margin-bottom: 20px; padding: 0 20px; }
+      @keyframes floatParticle { 0% { transform: translateY(100vh) translateX(0) rotate(0deg); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(-100px) translateX(100px) rotate(360deg); opacity: 0; } }
+      @keyframes pulseGlow { 0% { transform: scale(1); filter: drop-shadow(0 0 10px #00ffff); } 100% { transform: scale(1.1); filter: drop-shadow(0 0 30px #00ffff); } }
+      @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+      @keyframes borderGlow { 0% { box-shadow: 0 0 10px #00ffff; } 50% { box-shadow: 0 0 20px #ff00ff; } 100% { box-shadow: 0 0 10px #ffff00; } }
+      @keyframes titleFloat { 0%, 100% { transform: translateY(0) rotateY(0deg); } 50% { transform: translateY(-10px) rotateY(5deg); } }
+      @keyframes electricSpark { 0%, 100% { opacity: 0; transform: scale(0.5); } 50% { opacity: 1; transform: scale(1); } }
+      @keyframes rotateBorder { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      @keyframes selectedGlow { 0% { box-shadow: 0 0 15px rgba(255, 255, 0, 0.3); } 100% { box-shadow: 0 0 30px rgba(255, 255, 0, 0.6); } }
+      @keyframes iconFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+      @keyframes fireAnimation { 0% { transform: scale(0); opacity: 1; } 100% { transform: scale(2); opacity: 0; } }
+      @keyframes damageFloat { 0% { transform: translateY(0) scale(1); opacity: 1; } 100% { transform: translateY(-80px) scale(1.3); opacity: 0; } }
+      @keyframes popupShow { 0% { transform: translate(-50%, -50%) scale(0) rotateX(90deg); } 100% { transform: translate(-50%, -50%) scale(1) rotateX(0deg); } }
+      @keyframes scienceGlow { 0% { filter: drop-shadow(0 0 10px #00ffff); transform: scale(1); } 100% { filter: drop-shadow(0 0 15px #00ffaa); transform: scale(1.05); } }
+      @keyframes logEntry { 0% { transform: translateX(-20px); opacity: 0; } 100% { transform: translateX(0); opacity: 1; } }
+      @keyframes gameOverPulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.03); opacity: 0.8; } }
+      @media (max-width: 768px) { .main-title::after { right: -25px; } .hero-carousel { gap: 10px; } .mobile-controls { display: flex; justify-content: space-between; align-items: flex-end; } .dpad { width: 120px; height: 120px; } .dpad-btn { width: 50px; height: 50px; font-size: 1.2rem; } .action-btn { width: 60px; height: 60px; font-size: 1.2rem; } .combat-log { bottom: 150px; } }
+      @media (max-width: 480px) { .dpad { width: 100px; height: 100px; } .dpad-btn { width: 40px; height: 40px; font-size: 1rem; } .dpad-up { top: 0; left: 30px; } .dpad-down { bottom: 0; left: 30px; } .dpad-left { top: 30px; left: 0; } .dpad-right { top: 30px; right: 0; } .action-btn { width: 50px; height: 50px; font-size: 1rem; } .action-buttons { right: 10px; bottom: 10px; gap: 10px; } .combat-log { bottom: 130px; } }
+      @media (max-height: 500px) { .title-section { margin-bottom: 10px; } .hero-selection-container { margin: 10px 0; } .hero-card { height: 150px; padding: 10px; } .hero-icon { font-size: 2rem; margin-bottom: 5px; } .hero-stats { margin-top: 5px; } .menu-buttons { margin-top: 15px; } .menu-btn { padding: 8px 20px; min-height: 40px; } }
+      @media (orientation: landscape) and (max-height: 500px) { .main-title { font-size: 2rem; } .subtitle { font-size: 0.9rem; } .hero-card { width: 120px; height: 120px; padding: 8px; } .hero-icon { font-size: 1.5rem; margin-bottom: 3px; } .hero-name { font-size: 0.8rem; } .hero-stats { font-size: 0.6rem; } .menu-buttons { flex-direction: row; gap: 10px; margin-top: 10px; } .menu-btn { padding: 8px 15px; font-size: 0.9rem; } }
+    </style>
+    <div id="game-container">
+      <!-- Orientation Warning -->
+      <div id="orientation-warning">
+        <div class="orientation-icon">📱</div>
+        <div class="orientation-text">Please rotate your device to landscape mode for the best experience!</div>
+        <div class="subtitle">(Or play in portrait if you prefer touch controls)</div>
+      </div>
+      <div class="floating-particles" id="floating-particles"></div>
+      <div id="loading-screen">
+        <div class="loading-logo">🔥</div>
+        <h1 class="loading-title">SCIENCE FIGHTER 3D</h1>
+        <p class="loading-subtitle">Loading Epic 3D Anime Battle Experience...</p>
+        <div class="loading-progress-container">
+          <div class="loading-progress-bar" id="loading-bar"></div>
+        </div>
+        <div class="loading-percentage" id="loading-percentage">0%</div>
+      </div>
+      <div id="game-over">
+        <h1 class="game-over-title">MISSION COMPLETED</h1>
+        <div class="final-score" id="final-score">SCORE: 0</div>
+        <div class="menu-buttons">
+          <button class="menu-btn" id="restart-btn">⚡ PLAY AGAIN</button>
+          <button class="menu-btn" id="menu-btn">🏠 MAIN MENU</button>
+        </div>
+      </div>
+      <div id="main-menu">
+        <div class="title-section">
+          <h1 class="main-title">ANIME SCIENCE WARRIORS</h1>
+          <p class="subtitle">3D Battle Simulation • Class 6 Learning Adventure</p>
+        </div>
+        <div class="hero-selection-container">
+          <div class="hero-carousel" id="hero-carousel"></div>
+        </div>
+        <div class="menu-buttons">
+          <button class="menu-btn" id="start-game">🚀 START BATTLE</button>
+          <button class="menu-btn" id="how-to-play">🎮 HOW TO PLAY</button>
+          <button class="menu-btn" id="credits">📚 SCIENCE FACTS</button>
+        </div>
+      </div>
+      <div class="mobile-controls">
+        <div class="dpad">
+          <button class="dpad-btn dpad-up" id="up-btn">↑</button>
+          <button class="dpad-btn dpad-down" id="down-btn">↓</button>
+          <button class="dpad-btn dpad-left" id="left-btn">←</button>
+          <button class="dpad-btn dpad-right" id="right-btn">→</button>
+        </div>
+        <div class="action-buttons">
+          <button class="action-btn" id="attack-btn">⚔️</button>
+          <button class="action-btn" id="special-btn">✨</button>
+          <button class="action-btn" id="ultimate-btn">💥</button>
+        </div>
+      </div>
+      <div id="game-hud">
+        <div class="hud-player-info">
+          <div class="player-name" id="player-name">MAGNET WARRIOR</div>
+          <div class="health-container">
+            <div class="health-label">
+              <span>HEALTH</span>
+              <span id="health-value">100%</span>
+            </div>
+            <div class="health-bar">
+              <div class="health-fill" id="health-fill"></div>
+            </div>
+          </div>
+          <div class="energy-container">
+            <div class="energy-label">
+              <span>ENERGY</span>
+              <span id="energy-value">100%</span>
+            </div>
+            <div class="energy-bar">
+              <div class="energy-fill" id="energy-fill"></div>
+            </div>
+          </div>
+        </div>
+        <div class="hud-score">
+          <div class="score-label">SCORE</div>
+          <div class="score-value" id="score-value">0</div>
+        </div>
+        <div class="combat-log" id="combat-log"></div>
+        <div class="controls-help" id="controls-help">
+          <div class="control-item"><div class="control-key">WASD / Arrows</div><span>Move Hero</span></div>
+          <div class="control-item"><div class="control-key">SPACE</div><span>Fire Attack</span></div>
+          <div class="control-item"><div class="control-key">SHIFT</div><span>Special Move</span></div>
+          <div class="control-item"><div class="control-key">E</div><span>Ultimate Skill</span></div>
+        </div>
+      </div>
+      <div class="science-popup" id="science-popup">
+        <div class="science-icon" id="science-icon">🔬</div>
+        <h3 class="science-title">SCIENCE DISCOVERY!</h3>
+        <p class="science-content" id="popup-text">Magnets only attract iron, nickel, and cobalt objects</p>
+      </div>
+      <canvas id="game-canvas"></canvas>
+    </div>
+    </div><!--$--><!--/$--></main></div><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events:none"><ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol></div><script src="/_next/static/chunks/526c643bf2527860.js" id="_R_" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[80332,[\"/_next/static/chunks/47668a5d11abf730.js\",\"/_next/static/chunks/bdcf6abaa610ba57.js\",\"/_next/static/chunks/96ab8fbd00cdeb8f.js\",\"/_next/static/chunks/dba843f5f0a66a07.js\",\"/_next/static/chunks/814c3037edec1fbc.js\"],\"FirebaseClientProvider\"]\n3:I[70888,[\"/_next/static/chunks/47668a5d11abf730.js\",\"/_next/static/chunks/bdcf6abaa610ba57.js\",\"/_next/static/chunks/96ab8fbd00cdeb8f.js\",\"/_next/static/chunks/dba843f5f0a66a07.js\",\"/_next/static/chunks/814c3037edec1fbc.js\"],\"LanguageProvider\"]\n4:I[45872,[\"/_next/static/chunks/47668a5d11abf730.js\",\"/_next/static/chunks/bdcf6abaa610ba57.js\",\"/_next/static/chunks/96ab8fbd00cdeb8f.js\",\"/_next/static/chunks/dba843f5f0a66a07.js\",\"/_next/static/chunks/814c3037edec1fbc.js\"],\"Header\"]\n5:I[39756,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/946ac7d980f5ba21.js\"],\"default\"]\n6:I[37457,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/946ac7d980f5ba21.js\"],\"default\"]\n7:I[77855,[\"/_next/static/chunks/47668a5d11abf730.js\",\"/_next/static/chunks/bdcf6abaa610ba57.js\",\"/_next/static/chunks/96ab8fbd00cdeb8f.js\",\"/_next/static/chunks/dba843f5f0a66a07.js\",\"/_next/static/chunks/814c3037edec1fbc.js\"],\"Toaster\"]\n8:I[47257,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/946ac7d980f5ba21.js\"],\"ClientPageRoot\"]\n9:I[14455,[\"/_next/static/chunks/47668a5d11abf730.js\",\"/_next/static/chunks/bdcf6abaa610ba57.js\",\"/_next/static/chunks/96ab8fbd00cdeb8f.js\",\"/_next/static/chunks/dba843f5f0a66a07.js\",\"/_next/static/chunks/814c3037edec1fbc.js\",\"/_next/static/chunks/8d2308e23aa69f29.js\"],\"default\"]\nc:I[97367,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/946ac7d980f5ba21.js\"],\"OutletBoundary\"]\nd:\"$Sreact.suspense\"\nf:I[97367,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/946ac7d980f5ba21.js\"],\"ViewportBoundary\"]\n11:I[97367,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/946ac7d980f5ba21.js\"],\"MetadataBoundary\"]\n13:I[68027,[],\"default\"]\n:HL[\"/_next/static/chunks/317e37f6630c"])</script><script>self.__next_f.push([1,"0ebb.css\",\"style\"]\n:HL[\"/_next/static/chunks/317e37f6630c0ebb.css\",\"stylesheet\"]\n:HL[\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700\u0026display=swap\",\"stylesheet\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"SNee2HzKRAFrbTV3AAKw1\",\"c\":[\"\",\"games\",\"science\",\"simulations\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"games\",{\"children\":[\"science\",{\"children\":[\"simulations\",{\"children\":[\"__PAGE__\",{}]}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/317e37f6630c0ebb.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/47668a5d11abf730.js\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-1\",{\"src\":\"/_next/static/chunks/bdcf6abaa610ba57.js\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-2\",{\"src\":\"/_next/static/chunks/96ab8fbd00cdeb8f.js\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-3\",{\"src\":\"/_next/static/chunks/dba843f5f0a66a07.js\",\"async\":true,\"nonce\":\"$undefined\"}],[\"$\",\"script\",\"script-4\",{\"src\":\"/_next/static/chunks/814c3037edec1fbc.js\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"suppressHydrationWarning\":true,\"children\":[[\"$\",\"head\",null,{\"children\":[[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.googleapis.com\"}],[\"$\",\"link\",null,{\"rel\":\"preconnect\",\"href\":\"https://fonts.gstatic.com\",\"crossOrigin\":\"anonymous\"}],[\"$\",\"link\",null,{\"href\":\"https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700\u0026display=swap\",\"rel\":\"stylesheet\"}]]}],[\"$\",\"body\",null,{\"className\":\"font-body antialiased\",\"suppressHydrationWarning\":true,\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"children\":[[\"$\",\"div\",null,{\"className\":\"relative flex min-h-screen flex-col bg-background\",\"children\":[[\"$\",\"$L4\",null,{}],[\"$\",\"main\",null,{\"className\":\"flex-1 flex flex-col\",\"children\":[\"$\",\"$L5\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L6\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]]}],[\"$\",\"$L7\",null,{}]]}]}]}]]}]]}],{\"children\":[\"games\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L5\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L6\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"science\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L5\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L6\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"simulations\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L5\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L6\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$L8\",null,{\"Component\":\"$9\",\"searchParams\":{},\"params\":{},\"promises\":[\"$@a\",\"$@b\"]}],[[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/8d2308e23aa69f29.js\",\"async\":true,\"nonce\":\"$undefined\"}]],[\"$\",\"$Lc\",null,{\"children\":[\"$\",\"$d\",null,{\"name\":\"Next.MetadataOutlet\",\"children\":\"$@e\"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$Lf\",null,{\"children\":\"$@10\"}],[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$L11\",null,{\"children\":[\"$\",\"$d\",null,{\"name\":\"Next.Metadata\",\"children\":\"$@12\"}]}]}],null]}],false]],\"m\":\"$undefined\",\"G\":[\"$13\",[]],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"a:{}\nb:\"$0:f:0:1:2:children:2:children:2:children:2:children:1:props:children:0:props:params\"\n"])</script><script>self.__next_f.push([1,"10:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n"])</script><script>self.__next_f.push([1,"14:I[27201,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/946ac7d980f5ba21.js\"],\"IconMark\"]\n12:[[\"$\",\"title\",\"0\",{\"children\":\"Anime Science Warriors\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"3D Battle Simulation • Class 6 Learning Adventure\"}],[\"$\",\"link\",\"2\",{\"rel\":\"manifest\",\"href\":\"/manifest.json\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"link\",\"3\",{\"rel\":\"icon\",\"href\":\"/favicon.ico?favicon.7ed73651.ico\",\"sizes\":\"48x48\",\"type\":\"image/x-icon\"}],[\"$\",\"$L14\",\"4\",{}]]\ne:null\n"])</script></body></html>
