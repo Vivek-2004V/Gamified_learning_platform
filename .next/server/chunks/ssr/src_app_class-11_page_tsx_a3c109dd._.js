@@ -1,3 +1,0 @@
-module.exports=[94228,a=>{"use strict";var b=a.i(87924),c=a.i(72131),d=a.i(50944);a.i(79597);var e=a.i(71559),f=a.i(28137);a.i(69387);var g=a.i(60574);function h(){let a=(0,d.useRouter)(),{user:h,isUserLoading:i}=(0,e.useUser)(),j=(0,e.useFirestore)(),k=(0,e.useMemoFirebase)(()=>h?(0,g.doc)(j,"users",h.uid):null,[h,j]),{data:l,isLoading:m}=(0,f.useDoc)(k),n=i||m;return(0,c.useEffect)(()=>{if(!n){let b=l?.class?.toLowerCase().trim();"11"===b||"11th"===b?a.replace("/class-11/dashboard"):a.replace("/dashboard")}},[l,n,a]),(0,b.jsx)("div",{className:"flex h-screen w-full items-center justify-center"})}a.s(["default",()=>h])}];
-
-//# sourceMappingURL=src_app_class-11_page_tsx_a3c109dd._.js.map

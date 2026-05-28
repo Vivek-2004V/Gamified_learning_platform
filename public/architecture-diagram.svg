@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" font-family="Segoe UI, Arial, sans-serif">
+  <!-- Background -->
+  <rect width="800" height="900" fill="#0d1117" rx="12"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">VidyaSphere - System Architecture</text>
+  
+  <!-- Users Layer -->
+  <rect x="200" y="60" width="400" height="60" rx="10" fill="#1f6feb" stroke="#58a6ff" stroke-width="2"/>
+  <text x="400" y="87" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">👤 Users</text>
+  <text x="400" y="107" text-anchor="middle" fill="#c9d1d9" font-size="11">(Student / Teacher / Admin)</text>
+  
+  <!-- Arrow 1 -->
+  <line x1="400" y1="120" x2="400" y2="145" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Frontend Layer -->
+  <rect x="100" y="145" width="600" height="80" rx="10" fill="#161b22" stroke="#30a14e" stroke-width="2"/>
+  <text x="400" y="170" text-anchor="middle" fill="#30a14e" font-size="14" font-weight="bold">⚡ Next.js PWA Frontend (Vercel) ✅</text>
+  <rect x="120" y="180" width="120" height="30" rx="5" fill="#21262d"/>
+  <text x="180" y="200" text-anchor="middle" fill="#c9d1d9" font-size="10">Dashboard</text>
+  <rect x="250" y="180" width="100" height="30" rx="5" fill="#21262d"/>
+  <text x="300" y="200" text-anchor="middle" fill="#c9d1d9" font-size="10">Games</text>
+  <rect x="360" y="180" width="100" height="30" rx="5" fill="#21262d"/>
+  <text x="410" y="200" text-anchor="middle" fill="#c9d1d9" font-size="10">E-books</text>
+  <rect x="470" y="180" width="130" height="30" rx="5" fill="#21262d"/>
+  <text x="535" y="200" text-anchor="middle" fill="#c9d1d9" font-size="10">Class 6-12</text>
+  <rect x="610" y="180" width="80" height="30" rx="5" fill="#21262d"/>
+  <text x="650" y="200" text-anchor="middle" fill="#c9d1d9" font-size="10">3D/Three.js</text>
+  
+  <!-- Arrow 2 -->
+  <line x1="400" y1="225" x2="400" y2="250" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Offline Layer -->
+  <rect x="200" y="250" width="400" height="55" rx="10" fill="#161b22" stroke="#30a14e" stroke-width="2"/>
+  <text x="400" y="275" text-anchor="middle" fill="#30a14e" font-size="14" font-weight="bold">📴 Offline Layer ✅</text>
+  <text x="400" y="295" text-anchor="middle" fill="#c9d1d9" font-size="11">(Service Worker + IndexedDB + Cache API)</text>
+  
+  <!-- Arrow 3 -->
+  <line x1="400" y1="305" x2="400" y2="330" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Backend Layer -->
+  <rect x="200" y="330" width="400" height="55" rx="10" fill="#161b22" stroke="#d29922" stroke-width="2"/>
+  <text x="400" y="355" text-anchor="middle" fill="#d29922" font-size="14" font-weight="bold">🐍 FastAPI Backend (Railway) 🔄</text>
+  <text x="400" y="375" text-anchor="middle" fill="#8b949e" font-size="11">[Currently using Firebase — Migration planned]</text>
+  
+  <!-- Arrow 4 -->
+  <line x1="400" y1="385" x2="400" y2="410" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- AI Layer -->
+  <rect x="80" y="410" width="640" height="160" rx="10" fill="#161b22" stroke="#d29922" stroke-width="2"/>
+  <text x="400" y="435" text-anchor="middle" fill="#d29922" font-size="14" font-weight="bold">🧠 AI Layer (Hugging Face + Genkit) 🔄</text>
+  
+  <!-- AI Modules -->
+  <rect x="100" y="450" width="170" height="45" rx="8" fill="#21262d" stroke="#484f58" stroke-width="1"/>
+  <text x="185" y="470" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">🔍 Diagnostic Engine</text>
+  <text x="185" y="487" text-anchor="middle" fill="#8b949e" font-size="9">🔄 Under Development</text>
+  
+  <rect x="280" y="450" width="190" height="45" rx="8" fill="#21262d" stroke="#484f58" stroke-width="1"/>
+  <text x="375" y="470" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">💡 Recommendation Engine</text>
+  <text x="375" y="487" text-anchor="middle" fill="#8b949e" font-size="9">🔄 Under Development</text>
+  
+  <rect x="480" y="450" width="170" height="45" rx="8" fill="#21262d" stroke="#484f58" stroke-width="1"/>
+  <text x="565" y="470" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">🎓 AI Teacher Tutor</text>
+  <text x="565" y="487" text-anchor="middle" fill="#8b949e" font-size="9">🔄 Under Development</text>
+  
+  <rect x="150" y="505" width="170" height="45" rx="8" fill="#21262d" stroke="#484f58" stroke-width="1"/>
+  <text x="235" y="525" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">🌐 Translation Engine</text>
+  <text x="235" y="542" text-anchor="middle" fill="#8b949e" font-size="9">🔄 Under Development</text>
+  
+  <rect x="380" y="505" width="170" height="45" rx="8" fill="#21262d" stroke="#484f58" stroke-width="1"/>
+  <text x="465" y="525" text-anchor="middle" fill="#f0883e" font-size="11" font-weight="bold">🔊 Voice Engine</text>
+  <text x="465" y="542" text-anchor="middle" fill="#8b949e" font-size="9">🔄 Under Development</text>
+  
+  <!-- Arrow 5 -->
+  <line x1="400" y1="570" x2="400" y2="600" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Database Layer -->
+  <rect x="100" y="600" width="600" height="80" rx="10" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+  <text x="400" y="625" text-anchor="middle" fill="#58a6ff" font-size="14" font-weight="bold">🗄️ Database Layer</text>
+  
+  <rect x="130" y="640" width="230" height="30" rx="5" fill="#21262d" stroke="#30a14e" stroke-width="1"/>
+  <text x="245" y="660" text-anchor="middle" fill="#30a14e" font-size="11">Firebase Firestore ✅</text>
+  
+  <rect x="400" y="640" width="270" height="30" rx="5" fill="#21262d" stroke="#d29922" stroke-width="1"/>
+  <text x="535" y="660" text-anchor="middle" fill="#d29922" font-size="11">Supabase PostgreSQL 🔄</text>
+  
+  <!-- Arrow 6 -->
+  <line x1="400" y1="680" x2="400" y2="710" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Realtime Layer -->
+  <rect x="200" y="710" width="400" height="55" rx="10" fill="#161b22" stroke="#d29922" stroke-width="2"/>
+  <text x="400" y="735" text-anchor="middle" fill="#d29922" font-size="14" font-weight="bold">⚡ Realtime Socket Server 🔄</text>
+  <text x="400" y="755" text-anchor="middle" fill="#8b949e" font-size="11">(Live Collaboration &amp; Notifications)</text>
+  
+  <!-- Legend -->
+  <rect x="200" y="790" width="400" height="80" rx="8" fill="#21262d" stroke="#484f58" stroke-width="1"/>
+  <text x="400" y="815" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="bold">Legend</text>
+  <rect x="240" y="830" width="12" height="12" rx="2" fill="#30a14e"/>
+  <text x="260" y="841" fill="#c9d1d9" font-size="11">✅ Completed</text>
+  <rect x="420" y="830" width="12" height="12" rx="2" fill="#d29922"/>
+  <text x="440" y="841" fill="#c9d1d9" font-size="11">🔄 Under Development</text>
+  <rect x="240" y="850" width="12" height="12" rx="2" fill="#1f6feb"/>
+  <text x="260" y="861" fill="#c9d1d9" font-size="11">Core Infrastructure</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#58a6ff"/>
+    </marker>
+  </defs>
+</svg>
