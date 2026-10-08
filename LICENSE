@@ -5,66 +5,85 @@ All rights reserved.
 
 1. OWNERSHIP
 
-The VidyaSphere software, source code, architecture, documentation,
-designs, original assets, branding, and related materials are owned
-by Vivek Vishwakarma unless otherwise stated.
+VidyaSphere, including its original source code, architecture,
+documentation, original designs, original assets, branding, and related
+materials, is owned by Vivek Vishwakarma unless otherwise stated.
 
-2. PERMITTED USE
+2. PERMITTED ACCESS AND CONTRIBUTION
 
-The source code is made publicly available on GitHub for the purposes of:
+The source code may be accessed through the official GitHub repository for
+the purposes of:
 
-- inspection and study;
+- reviewing and studying the source code;
 - educational and research evaluation;
-- bug reporting;
-- issue discussion;
-- development of fixes and improvements;
-- submitting Pull Requests to the official repository.
+- reporting bugs;
+- proposing improvements;
+- implementing fixes;
+- developing features for submission through Pull Requests to the
+  official repository.
 
 3. RESTRICTIONS
 
-Without prior written permission from the copyright owner, no person
-or organization may:
+Without prior written permission from Vivek Vishwakarma, no person or
+organization may:
 
-- redistribute the complete source code or a substantial portion of it;
-- publish a modified or renamed version of the project;
-- use the project as the basis of a competing product or service;
+- sell the software or a substantial portion of it;
 - commercially exploit the software;
-- sell, sublicense, or license the software or derivative works;
-- deploy a public or commercial service substantially based on the project;
-- remove copyright, ownership, or attribution notices;
-- represent the project or derivative work as an independently owned project.
+- redistribute the complete source code or a substantial portion of it;
+- publish a modified or rebranded version as an independent project;
+- create a competing product or service substantially based on the
+  software;
+- deploy a public or commercial service substantially based on the
+  software;
+- sublicense or relicense the software;
+- remove copyright or ownership notices;
+- represent VidyaSphere or a derivative version as an officially
+  independent project.
 
 4. CONTRIBUTIONS
 
-Contributions submitted through Pull Requests, Issues, or other approved
-channels may be incorporated into the official VidyaSphere project.
+Contributors may submit code, documentation, bug fixes, designs, tests,
+or other materials through approved contribution channels.
 
-By submitting a contribution, the contributor confirms that they have the
-right to submit it and grants the project maintainer the necessary rights
-to use, modify, integrate, and distribute that contribution as part of
-VidyaSphere.
+By submitting a contribution, the contributor confirms that:
+
+- they have the right to submit the contribution;
+- the contribution does not knowingly infringe another person's rights;
+- they grant the VidyaSphere project maintainer a non-exclusive,
+  worldwide, royalty-free right to use, modify, integrate, reproduce,
+  and distribute the contribution as part of VidyaSphere.
+
+This section does not automatically transfer ownership of a contributor's
+pre-existing independent work.
 
 5. OFFICIAL PROJECT
 
-Only the repository controlled by Vivek Vishwakarma is considered the
-official VidyaSphere project.
+The official VidyaSphere project is the repository maintained by
+Vivek Vishwakarma.
 
-Forks and modified copies are not official versions unless expressly
-authorized in writing.
+Forks, mirrors, modified copies, and derivative projects are not official
+VidyaSphere releases unless explicitly authorized in writing.
 
-6. COMMERCIAL LICENSE
+6. COMMERCIAL USE
 
-Commercial use, deployment, redistribution, integration, or licensing may
-be permitted only through a separate written agreement with the copyright
-owner.
+Commercial use, commercial deployment, redistribution, licensing,
+integration, or creation of products substantially based on VidyaSphere
+requires prior written permission from the copyright owner.
 
-7. NO WARRANTY
+7. THIRD-PARTY MATERIAL
+
+Third-party libraries, assets, dependencies, and other materials remain
+subject to their respective licenses and are not automatically covered
+by this license.
+
+8. NO WARRANTY
 
 The software is provided "as is", without warranty of any kind.
 
-8. RESERVATION OF RIGHTS
+9. RESERVATION OF RIGHTS
 
 All rights not expressly granted by this license are reserved by the
 copyright owner.
 
-Copyright © 2026 Vivek Vishwakarma. All rights reserved.
+Copyright (c) 2026 Vivek Vishwakarma.
+All rights reserved.
